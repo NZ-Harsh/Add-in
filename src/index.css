@@ -1,0 +1,763 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+.preload-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  margin: 0;
+  gap: 10;
+}
+
+
+.logo {
+  position: absolute;
+  top: 1rem;
+  left: 3rem;
+  cursor: pointer;
+}
+
+.logo img {
+  height: 3.5rem;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 200px !important;
+  position: absolute;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-family: 'Segoe UI, sans-serif';
+  margin-top: 10px;
+  height: 69%;
+}
+
+.font-size-20 {
+  font-size: 16px;
+}
+
+.font-size-25 {
+  font-size: 16px;
+}
+
+.font-size-30 {
+  font-size: 16px;
+}
+
+.font-size-35 {
+  font-size: 16px;
+}
+
+.bg-size-100 {
+  background-size: 100%;
+}
+
+.bg-size-90 {
+  background-size: 90%;
+}
+
+.bg-size-contain {
+  background-size: contain;
+}
+
+.main-page {
+  background-color: var(--bg-color);
+  height: 100vh;
+  color: var(--font-color);
+  padding: 0;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.button-container {
+  display: flex;
+  gap: 14px;
+  position: sticky;
+  align-items: center;
+  padding-left: 7px;
+}
+
+.site-name {
+  text-decoration: none;
+  padding: 0;
+  display: inline-block;
+  margin-left: 0em;
+  margin-bottom: 0;
+  cursor: default;
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 12px;
+
+}
+
+.sign-out-button {
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  display: inline-block;
+  margin-left: 0em;
+  margin-bottom: 0;
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 12px;
+
+}
+
+.tabs {
+  color: var(--font-color) !important;
+}
+
+.tab-container {
+  /* display: flex; */
+  padding-left: 7px;
+  padding-top: 7px;
+  padding: 5px;
+}
+
+.custom-tabs {
+  min-height: 26px !important;
+  padding: 0;
+  margin: 0;
+  height: 37px;
+}
+
+.tab-container .MuiTabs-flexContainer {
+  height: 30px !important;
+}
+
+.tab-container .MuiButtonBase-root {
+  padding: 0px !important;
+  font-family: 'Segoe UI', sans-serif !important;
+  color: var(--font-color) !important;
+  font-size: 12px;
+  text-transform: none !important;
+  margin: 0px !important;
+  gap: 0 !important;
+  display: flex !important;
+  min-width: 72px;
+  min-height: 0 !important;
+}
+
+
+.tabs-content {
+  color: var(--font-color);
+  gap: 10;
+}
+
+.nz-searchcombo .MuiOutlinedInput-notchedOutline {
+  border-color: var(--font-color) !important;
+  min-height: 49px !important;
+  /* padding: 0px 0px 0px 10px !important;  */
+}
+
+.select-label {
+  color: var(--font-color) !important;
+  font-size: 12px !important;
+  font-family: 'Segoe UI', sans-serif !important;
+  margin-top: 2px !important;
+}
+
+.MuiButtonBase-root .Mui-selected {
+  color: var(--link-color) !important;
+}
+
+.MuiTabs-indicator {
+  display: none;
+}
+
+.select-label {
+  color: var(--font-color) !important;
+  font-size: 12px !important;
+  font-family: 'Segoe UI', sans-serif !important;
+  margin-top: 2px !important;
+}
+
+.select-input {
+  color: var(--font-color) !important;
+  font-size: 12px !important;
+  height: 41px !important;
+}
+
+.select-menu-item {
+  font-size: 12px !important;
+  font-family: 'Segoe UI', sans-serif !important;
+  color: var(--black-font) !important;
+  font-weight: 400;
+}
+
+.disabled-menu-item {
+  font-size: 12px !important;
+  font-family: 'Segoe UI', sans-serif !important;
+  color: var(--black-font) !important;
+}
+
+.select-dropdown {
+  max-height: 350px !important;
+  overflow-y: auto;
+}
+
+/* For medium-height screens */
+@media (max-height: 768px) {
+  .select-dropdown {
+    max-height: 40vh !important;
+    /* Adjust to 40% of viewport height */
+  }
+}
+
+/* For smaller-height screens */
+@media (max-height: 480px) {
+  .select-dropdown {
+    max-height: 30vh !important;
+    /* Adjust to 30% of viewport height */
+  }
+}
+
+.MuiTypography,
+.MuiFormControlLabel-label,
+.MuiInputBase-root,
+.MuiButton-root {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+
+.Mui-focused {
+  color: rgb(255, 255, 255) !important;
+  line-height: 2.4375em;
+  font-size: 12px;
+}
+
+.MuiInputBase-input .MuiOutlinedInput-input h1 {
+  font-size: 12px;
+}
+
+.MuiSelect-select .MuiSelect-outlined .MuiInputBase-input .MuiOutlinedInput-input {
+  font-size: 12px;
+  padding: 0px 5px;
+  font-family: 'Segoe UI', sans-serif !important;
+}
+
+.MuiTabs-scroller {
+  margin-top: 0px;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  height: 30px !important;
+  /* width: 100% !important; */
+}
+
+/* .MuiInputBase-input .span{
+  color: var(--font-color);
+} */
+
+.MuiFormControl-root {
+  width: 100%;
+}
+
+.form-container .MuiFormControl-root {
+  margin-bottom: 10px !important;
+}
+
+.MuiButtonBase-root-MuiRadio-root.Mui-checked {
+  color: var(--font-color) !important;
+}
+
+.MuiSelect-select .select-menu-item {
+  font-size: 12px;
+  font-family: 'Segoe UI', sans-serif !important;
+
+}
+
+.MuiInputBase-root .MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.MuiSelect-select {
+  line-height: 0.3em !important;
+
+}
+
+.MuiInputBase-root .MuiSvgIcon-root {
+  color: var(--font-color);
+}
+
+.MuiOutlinedInput-notchedOutline {
+  padding: 0;
+}
+
+.MuiPaper-root {
+  left: 5px !important;
+}
+
+.MuiList-root {
+  padding: 0px !important;
+}
+
+.MuiList-root .MuiButtonBase-root {
+  min-height: 0px !important;
+  font-family: 'Segoe UI', sans-serif !important;
+  font-size: 12px !important;
+}
+
+
+.tabs-content {
+  position: relative;
+  transition: transform 0.4s ease;
+  margin-top: 0px;
+}
+
+.tabs-content.slide-left {
+  transform: translateX(-100%);
+  overflow: hidden;
+}
+
+.tabs-content.slide-right {
+  transform: translateX(100%);
+  /* Slide right */
+}
+
+.tabs-content.slide-left,
+.tabs-content.slide-right {
+  overflow: hidden;
+  /* Ensures scrollbars are hidden during transition */
+  transform: translateX(100%);
+}
+
+/* Container for the search input and image */
+.search-input-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+
+/* Styling for the TextField wrapper */
+.search-field-wrapper {
+  flex-grow: 1;
+  padding: 1px;
+  font-size: 12px;
+}
+
+/* Custom search image styling */
+.search-icon {
+  padding-left: 0;
+  cursor: pointer;
+  width: 40px;
+  height: 20px;
+  color: var(--font-color);
+}
+
+/* TextField input styles */
+.text-field-root {
+  height: 40px !important;
+}
+
+.text-field-input {
+  color: var(--font-color) !important;
+  font-size: 12px !important;
+  padding: 0px 0px !important;
+}
+
+.text-field-label {
+  color: var(--font-color) !important;
+  font-size: 12px !important;
+  font-family: 'Segoe UI', sans-serif !important;
+}
+
+.text-field-outline {
+  border-color: var(--font-color) !important;
+}
+
+.text-field-outline:hover {
+  border-color: var(--font-color) !important;
+}
+
+.text-field-focused .MuiOutlinedInput-notchedOutline {
+  border-color: var(--font-color) !important;
+}
+
+.MuiFormControl-root .MuiFormLabel-root {
+  color: var(--font-color) !important;
+  font-size: 12px;
+}
+
+.MuiInputBase-input-MuiOutlinedInput-input:-webkit-autofill {
+  font-size: 12px;
+}
+
+.MuiTypography-root {
+  font-size: 12px !important;
+  font-family: 'Segoe UI', sans-serif !important;
+}
+
+.form-container .MuiButtonBase-root {
+  min-width: 33px !important;
+}
+
+.search-field-wrapper .MuiInputBase-root .MuiInputBase-input {
+  /* padding: 13px 0 0 17px !important;   */
+  color: var(--font-color);
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.form-container .MuiFormGroup-root {
+  padding-top: 5px;
+  padding-left: 5px;
+}
+
+.form-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin-top: 0px;
+}
+
+.search-field-wrapper .MuiFormLabel-root {
+  padding-bottom: 10px;
+  font-family: 'Segoe UI', sans-serif;
+  /* line-height: 2.0 !important; */
+}
+
+/* .search-field-wrapper .MuiOutlinedInput-input{
+  padding: 10px !important;
+  position: relative;
+} */
+/* .search-field-wrapper .MuiFormControl-root label{
+padding-bottom: 10px;
+} */
+
+.In-Container .MuiTabs-flexContainer {
+  /* width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin-top: 0px; */
+  height: 30px;
+}
+
+.MuiButtonBase-root.MuiTab-root.MuiTab-textColorPrimary.Mui-selected {
+  color: var(--link-color) !important;
+}
+
+.MuiInputBase-root .MuiSelect-select {
+  padding-bottom: 9px !important;
+  font-family: 'Segoe UI', sans-serif !important;
+  font-size: 12px !important;
+}
+
+
+
+/* property table */
+.snackbar-message {
+  color: #050505;
+  background-color: #ffffff;
+}
+
+.snackbar-content {
+  background-color: var(--font-color) !important;
+  color: var(--font-color);
+}
+
+.copy-icon-wrapper {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+
+
+.copy-icon-wrapper img {
+  width: 16px;
+  height: 16px;
+}
+
+.styled-table-row:hover {
+  background-color: #ffffff;
+}
+
+.styled-table-row:hover .copy-icon-wrapper {
+  opacity: 1;
+}
+
+.MuiTableBody-root {
+  display: flex !important;
+  flex-direction: column;
+  gap: 5px;
+  padding: 2px;
+
+}
+
+.MuiTableRow-root {
+  display: flex !important;
+  width: 100% !important;
+  border: 1px solid white !important;
+  border-radius: 0px !important;
+}
+
+.MuiTableCell-root {
+  width: 50%;
+  border: none !important;
+  display: flex !important;
+  align-items: center;
+  font-weight: 500 !important;
+  border: #ffffff;
+}
+
+/* // svg content  */
+.svg-card {
+  background-color: #778899 !important;
+  margin-top: 20px;
+  position: relative !important;
+  border-radius: 8px;
+  color: white;
+  font-size: 12px;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 8px;
+  padding-top: 10px;
+  justify-content: center !important;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.svg-card-sm {
+  margin-top: 10px;
+  padding: 7px;
+}
+
+.svg-wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  justify-content: flex-end !important;
+  align-items: center;
+}
+
+.svg-wrapper svg {
+  width: 100%;
+  height: auto;
+  max-height: 325px;
+}
+
+.svg-wrapper-md svg {
+  max-height: 250px;
+}
+
+.svg-wrapper-sm svg {
+  max-height: 200px;
+}
+
+.pnumber-div {
+  display: flex;
+  justify-content: center !important;
+  position: relative;
+  width: 100%;
+}
+
+.product-number {
+  text-align: center !important;
+  position: relative;
+  justify-content: center !important;
+  margin-top: 0 !important;
+  margin: 0 !important;
+  width: 100%;
+  color: var(--font-color);
+  font-weight: bold;
+  bottom: 0.2%;
+}
+
+.product-number {
+  font-size: 10px !important;
+}
+
+@media (min-width: 100px) {
+  .product-number {
+    font-size: 8px !important;
+  }
+}
+
+@media (min-width: 300px) {
+  .product-number {
+    font-size: 8px !important;
+  }
+}
+
+
+@media (min-width: 600px) {
+  .product-number {
+    font-size: 8px !important;
+  }
+}
+
+@media (min-width: 900px) {
+  .product-number {
+    font-size: 12px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .product-number {
+    font-size: 12px !important;
+  }
+}
+
+
+.rc-tree .rc-tree-switcher-noop {
+  background-color: #ffffff !important;
+  color: black;
+}
+
+
+.rc-tree-node-selected {
+  background-color: var(--font-color) !important;
+  box-shadow: none !important;
+
+}
+
+
+.custom-rc-tree .rc-tree-node-content-wrapper {
+  font-size: 12px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.custom-rc-tree .rc-tree-treenode-selected {
+  background-color: var(--font-color) !important;
+  color: black !important;
+  width: 100% !important;
+  line-height: 0px;
+  min-height: 10px !important;
+  display: flex !important;
+  align-items: center;
+  /* position: unset !important; */
+}
+
+.rc-tree-treenode {
+  display: flex !important;
+  align-items: center;
+  width: 100% !important;
+}
+
+.rc-tree {
+  width: 100%;
+}
+
+.rc-tree .rc-tree-node-selected .rc-tree-switcher {
+  color: black !important;
+  background-color: #efefef !important;
+}
+
+.custom-rc-tree .rc-tree-node-selected .rc-tree-iconEle {
+  background-color: #efefef !important;
+}
+
+/* Set icon styles for selected nodes */
+/* .custom-rc-tree .rc-tree-node-selected .css-i4bv87-MuiSvgIcon-root {
+    color: black !important; 
+    background-color: #efefef !important;  
+  } */
+
+.rc-tree .rc-tree-treenode .rc-tree-node-content-wrapper {
+  /* position: unset !important; */
+  display: flex !important;
+  align-items: center !important;
+}
+
+.MuiTabs-scroller {
+  margin-top: 0px;
+}
+
+/*  
+   .rc-tree .rc-tree-treenode{
+     line-height: 0px;
+   } */
+
+.svg path {
+  fill: var(--font-color);
+}
+
+.rc-tree-title {
+  font-weight: 500 !important;
+}
+
+.rc-tree .rc-tree-switcher-noop,
+.rc-tree .rc-tree-switcher_open,
+.rc-tree .rc-tree-switcher_close {
+  background: none !important;
+  width: 0;
+  height: 0;
+}
+
+.back-icon {
+  cursor: pointer;
+  padding: 0;
+  display: inline-block;
+  margin-left: 0em;
+  margin-bottom: 0;
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.rc-tree .rc-tree-treenode span.rc-tree-switcher.rc-tree-switcher_open {
+  font-size: 0 !important;
+  line-height: 0 !important;
+}
+
+.rc-tree .rc-tree-treenode span.rc-tree-switcher.rc-tree-switcher_close {
+  font-size: 0 !important;
+  line-height: 0 !important;
+}
+
+.MuiTabs-root {
+  min-height: 5px !important;
+}
+
+.tab {
+  display: flex;
+}
+
+.scroll-btn {
+  min-width: 0 !important;
+  min-height: 0 !important;
+}
+
+.MuiTabs-root {
+  justify-content: center !important;
+  align-items: center !important;
+
+}
+
+.tab .MuiButtonBase-root .MuiSvgIcon-root .MuiTouchRipple-root {
+  min-width: 0 !important;
+  min-height: 0 !important;
+}
+
+.MuiTabs-root .MuiTabs-scrollButtons {
+  min-width: 0 !important;
+  min-height: 0 !important;
+}
+
+.custom-tabs {
+  width: 100%;
+}
+
+@media (max-width: 300px) {
+  .custom-tabs .MuiTabs-scrollButtons {
+    display: flex !important;
+    /* Ensure scroll buttons are visible below 300px */
+  }
+}
+
+.MuiBackdrop-root .MuiPaper-root {
+  left: 5px !important;
+}
