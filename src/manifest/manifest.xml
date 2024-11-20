@@ -34,7 +34,7 @@
 		<Host Name="Workbook"/>
 	</Hosts>
 	<DefaultSettings>
-    <SourceLocation DefaultValue= "https://netzoom-stencils.vercel.app/?vercelToolbarCode=OzKpCQ5nmmryJhi" />
+    <SourceLocation DefaultValue= "https://add-in-beta.vercel.app/?vercelToolbarCode=h2uWp4QC9quWDaP" />
 	
 	</DefaultSettings>
 	<!-- End TaskPane Mode integration.  -->
@@ -130,7 +130,7 @@
 			</bt:Images>
 			<bt:Urls>
 				<bt:Url id="NZ.DesktopFunctionFile.Url" DefaultValue="https://www.visiostencils.com/stencilsforoffice/commands.html" />
-				<bt:Url id="NZ.Taskpane.Url" DefaultValue="https://stencils.vercel.app/" />
+				<bt:Url id="NZ.Taskpane.Url" DefaultValue="https://add-in-beta.vercel.app/?vercelToolbarCode=h2uWp4QC9quWDaP" />
 				<bt:Url id="NZ.GetStarted.LearnMoreUrl" DefaultValue="https://www.visiostencils.com/index.html" />
 			</bt:Urls>
 			<!-- ShortStrings max characters==125. -->
