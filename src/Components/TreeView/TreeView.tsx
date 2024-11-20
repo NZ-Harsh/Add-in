@@ -290,7 +290,7 @@ const Treeview = (props: any) => {
     console.log('Drag started on node:', node);
 
     try {
-      await getDevicemodelSvg(node.shapeId).then((resp) => {
+      await getDevicemodelSvg(node.ShapeID).then((resp) => {
         const parsesvg = JSON.parse(resp.data.devicePreviewJson)
         const decodedSvg = window.atob(parsesvg[0].SVG);
 
