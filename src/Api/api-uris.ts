@@ -1,10 +1,10 @@
 import config from "../config/config";
 const apiUris: any = {};
 
-const baseUrl =
-  !process.env.NODE_ENV || process.env.NODE_ENV === "development"
-    ? config.BASE_URL
-    : config.BASE_URL_PROD;
+const baseUrl = config.BASE_URL
+  // !process.env.NODE_ENV || process.env.NODE_ENV === "development"
+  //   ? config.BASE_URL
+  //   : config.BASE_URL_PROD;
     
 const SESSION_API_URL = `${baseUrl}${config.Session_API_URL}`;
 const MISC = `${baseUrl}${config.misc}`
