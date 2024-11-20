@@ -321,6 +321,7 @@ const Treeview = (props: any) => {
           selectedKeys={selectedKeys}
           showLine={true}
           onDragStart={handleDragStart} 
+          draggable
         />
       }
       {propertyData && propertyData.length > 0 ? (
