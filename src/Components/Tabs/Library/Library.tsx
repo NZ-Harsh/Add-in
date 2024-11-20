@@ -291,7 +291,7 @@ const Library = () => {
               value={selectedManufacturer}
               className='nz-searchcombo'
               onChange={handleManufacturerChange}
-              input={<OutlinedInput label={"Manufacturers"}
+              input={<OutlinedInput label={"Manufacturers[0000]"}
                 className='select-input'
               />}
               MenuProps={{

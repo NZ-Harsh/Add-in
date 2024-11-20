@@ -144,8 +144,9 @@ body {
   margin: 0px !important;
   gap: 0 !important;
   display: flex !important;
-  min-width: 72px;
+  /* min-width: 72px; */
   min-height: 0 !important;
+  height: 28px !important;
 }
 
 
