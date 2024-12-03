@@ -60,11 +60,9 @@ height: 27px !important;
 }
 
 .nz-filter-popup-div .nz-filter-container {
-  /* height: calc(100vh - 200px); */
   overflow: hidden;
   overflow-y: auto;
-  /* z-index: 999 !important; */
-  /* height: 100% !important; */
+
 }
 
 .nz-filter-popup-div .nz-filter-container::-webkit-scrollbar {
@@ -88,14 +86,6 @@ height: 27px !important;
   overflow: auto;
 }
 
-/* .nz-filter-popup-div .nz-filter-container:hover {
-    height: calc(100vh - 202px);
-    overflow: auto;
-  } */
-
-/* .nz-filter-popup-div .nz-filter-container .rc-tree {
-    position: inherit !important;
-  } */
 
 .nz-filter-popup-div .nz-filter-container .ng-treeview-assest-mgt {
   max-height: 100%;
@@ -181,9 +171,7 @@ height: 27px !important;
   justify-content: center !important;
 }
 
-/* .nz-img-three-dots-rtm {
-  width: 20px !important;
-} */
+
 
 .nz-searchDiv .MuiInputBase-root {
   /* height: 50px !important; */
@@ -213,7 +201,6 @@ margin-left: 42px !important;
 .nz-popover-three-dots-menu-div .MuiPaper-root {
   max-height: calc(100vh - 10px) !important;
   overflow-y: hidden;
-  /* top: unset !important; */
 }
 
 .nz-popover-three-dots-menu-div .nz-popover-menu-box {
@@ -224,7 +211,6 @@ margin-left: 42px !important;
 
 
 .nz-misc-icon-search-keyword svg {
-  /* color: var(--font-color) !important; */
   fill: #fff !important;
 }
 
@@ -258,9 +244,7 @@ margin-left: 42px !important;
   gap: 4px !important;
 }
 
-/* .rc-tree .rc-tree-treenode span.rc-tree-checkbox{
-  margin: 0 3px !important;
-} */
+
 .nz-nav-filter-icon-box .MuiBox-root {
   width: 60px !important;
   display: flex;
@@ -273,18 +257,13 @@ margin-left: 42px !important;
 }
 
 
-/* .ng-treeview-export-import .rc-tree-treenode span.rc-tree-iconEle {
-  line-height: 0px !important;
-  vertical-align: 0.3em !important;
-} */
+
 .nz-filter-explorer,
 .nz-filter-site-tree {
   padding: 5px;
 }
 
-/* .nz-tree-filter-div .rc-tree {
-  width: calc(100% - 10px) !important;
-} */
+
 .MuiAutocomplete-root {
   width: 100% !important;
 }
@@ -334,7 +313,6 @@ MuiAutocomplete-root .MuiOutlinedInput-root.MuiInputBase-sizeSmall .MuiAutocompl
 .nz-search-setting-with-filter {
   display: flex;
   width: 100%;
-  /* padding: 2px 0px; */
   position: initial;
   align-items: center;
   height: 40px;
@@ -347,28 +325,13 @@ MuiAutocomplete-root .MuiOutlinedInput-root.MuiInputBase-sizeSmall .MuiAutocompl
   margin-bottom: 7px !important;
 }
 
-/* .MuiButtonBase-root{
-  width: 40px !important;
-    height: 40px !important;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    padding-left: 2px !important;
-} */
+
 
 .nz-list-nav-category .nz-tree-filter-div {
   padding-top: 5px !important;
 }
 
-/* .search-tree .rc-tree-treenode{
-    display: flex;
-    justify-content: center;
-    align-self: center;
-  } */
 
-/* .nz-feature-icon svg{
-      height: 0px !important;
-    } */
     .nz-feature-icon{
       width: 35px !important;
     }
@@ -476,9 +439,7 @@ MuiAutocomplete-root .MuiOutlinedInput-root.MuiInputBase-sizeSmall .MuiAutocompl
 .Lensx0{
   stroke: #fff !important;
 }
-/* .nz_fc_rc__menu_portal{
-  display: flex !important;
-} */
+
 
 .nz_fc_rc--is-disabled .nz_fc_rc__single-value--is-disabled,
 .nz_fc_rc--is-disabled .nz-misc-icon-search-keyword svg g,

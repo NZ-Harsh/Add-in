@@ -325,7 +325,7 @@ body {
 .tabs-content.slide-right {
   transform: translateX(100%);
   /* Slide right */
-/* } */ */
+/* } */ 
 
 .tabs-content.slide-left,
 .tabs-content.slide-right {
@@ -1045,16 +1045,7 @@ flex-direction: column;
   width: 50% !important;
   height: 48px !important;
 }
-/* .custom-rc-tree .rc-tree-title{
-margin-top:23px !important;
-} */
 
- /* .custom-rc-tree .rc-tree-treenode-selected .svg .polygon{
-  stroke: #050505;
- } */
- /* .rc-tree-treenode-selected .nz-treeview-img-auth svg path, .nz-treeview-img-auth svg line, .nz-treeview-img-auth svg circle, .nz-treeview-img-auth svg rect, .nz-treeview-img-auth svg polyline, .nz-treeview-img-auth svg ellipse, .nz-treeview-img-auth svg polygon{
-stroke: #050505 !;
- } */
 
  
 .custom-rc-tree {
