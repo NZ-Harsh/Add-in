@@ -36,7 +36,12 @@ export const getOpenSessions = () => {
     return fetchInterceptor(apiUris.Session.GetOpenSession, {});
 }
 
-
+export function closeSession(embeddedSessionId: string | null = null, forceClose: boolean = false) {
+    return fetchInterceptor(apiUris.Session.CloseSession, {
+        sessionId: embeddedSessionId,
+        forceClose: forceClose
+    });
+}
 
 
 

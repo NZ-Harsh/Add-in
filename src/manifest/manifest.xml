@@ -19,13 +19,13 @@
 	<DisplayName DefaultValue="Add-in"/>
 	<Description DefaultValue="NetZoom, Inc."/>
 	<!-- Icon for your add-in. Used on installation screens and the add-ins dialog. -->
-	<IconUrl DefaultValue="https://storage.googleapis.com/nzpublic/nzgraphics/stencilsforoffice/icons/nze/favicon16x16.png" />
+	<IconUrl DefaultValue="https://storage.googleapis.com/nzpublic/nzgraphics/stencilsforoffice/icons/nz/32x32.png" />
 	<HighResolutionIconUrl DefaultValue="https://storage.googleapis.com/nzpublic/nzgraphics/stencilsforoffice/icons/nz/64x64.png" />
 
 	<SupportUrl DefaultValue="https://www.visiostencils.com/support/index.html" />
 	<!-- Domains that will be allowed when navigating. For example, if you use ShowTaskpane and then have an href link, navigation will only be allowed if the domain is on this list. -->
 	<AppDomains>
-		<AppDomain>https://add-in-beta.vercel.app/?vercelToolbarCode=h2uWp4QC9quWDaP</AppDomain>
+		<AppDomain>https://netzoom-stencils.vercel.app/?vercelToolbarCode=OzKpCQ5nmmryJhi</AppDomain>
 	</AppDomains>
 	<!--End Basic Settings. -->
 
@@ -34,7 +34,7 @@
 		<Host Name="Document"/>
 	</Hosts>
 	<DefaultSettings>
-    <SourceLocation DefaultValue= "https://add-in-beta.vercel.app/?vercelToolbarCode=h2uWp4QC9quWDaP" />
+    <SourceLocation DefaultValue= "https://netzoom-stencils.vercel.app/?vercelToolbarCode=OzKpCQ5nmmryJhi" />
 	
 	</DefaultSettings>
 	<!-- End TaskPane Mode integration.  -->
@@ -130,7 +130,7 @@
 			</bt:Images>
 			<bt:Urls>
 				<bt:Url id="NZ.DesktopFunctionFile.Url" DefaultValue="https://www.visiostencils.com/stencilsforoffice/commands.html" />
-				<bt:Url id="NZ.Taskpane.Url" DefaultValue="https://add-in-beta.vercel.app/?vercelToolbarCode=h2uWp4QC9quWDaP" />
+				<bt:Url id="NZ.Taskpane.Url" DefaultValue="https://stencils.vercel.app/" />
 				<bt:Url id="NZ.GetStarted.LearnMoreUrl" DefaultValue="https://www.visiostencils.com/index.html" />
 			</bt:Urls>
 			<!-- ShortStrings max characters==125. -->

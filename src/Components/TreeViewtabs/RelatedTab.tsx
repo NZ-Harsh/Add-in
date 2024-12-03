@@ -1,6 +1,7 @@
 import Treeview from '../TreeView/TreeView'
 import { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
+
 export const RelatedTab = (props:any) => {
 
   const [expandedKeys, setExpandedKeys] = useState<string[]>([]);
@@ -9,7 +10,6 @@ export const RelatedTab = (props:any) => {
   useEffect(()=>{
     if(relatedExpandedKeys?.length > 0){
       setExpandedKeys([...relatedExpandedKeys])
-      // console.log("redux expandedkeys",resultExpandedKeys)
     } 
   },[relatedExpandedKeys])
 
@@ -17,9 +17,12 @@ export const RelatedTab = (props:any) => {
   return (
 
     <div>
-        <Treeview treedata={props.treedata} instanceName='nz-related-tab-tree'
-         expandedkeys={expandedKeys} selectedkeys={[]} handleSelect={props.handleSelect}
+        <Treeview treeData={props.treeData} instanceName='nz-related-tab-tree'
+         expandedKeys={expandedKeys} selectedkeys={[]} handleSelect={props.handleSelect}
          selectedNode={''}
+         handleNodeCheckedEvent={relatedExpandedKeys}
+         handleNodeSelectEvent={(selectedKeys: any, info: any, expandedNodes: any) => {
+        }}
          />
 
     </div>

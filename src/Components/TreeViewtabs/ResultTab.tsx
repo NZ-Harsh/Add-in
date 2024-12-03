@@ -14,19 +14,20 @@ const resultselectednode = useSelector((state:any) => state.TreeDataReducer).res
 useEffect(()=>{
   if(resultExpandedKeys?.length > 0){
     setExpandedKeys([...resultExpandedKeys])
-   
+   console.log(resultExpandedKeys)
   } 
 },[resultExpandedKeys])
 
 useEffect(() =>{
-if(resultSelectedKeys?.length > 0){
+if(resultSelectedKeys){
   setSelectedKeys(resultSelectedKeys)
+  console.log('resultresultSelectedKeys selected key', resultSelectedKeys)
 }
 },[resultSelectedKeys])
 console.log("redux selected",resultSelectedKeys)
 
 useEffect(() =>{
-  if(resultselectednode?.length > 0){
+  if(resultselectednode){
     setSelectedNode(resultselectednode)
  console.log("node",resultselectednode)
   }
@@ -34,12 +35,19 @@ useEffect(() =>{
 
   return (
     <div>
-        <Treeview treedata={props.treedata} 
+        <Treeview treeData={props.treeData} 
         handleSelect={props.handleSelect} 
-        expandedkeys= {expandedKeys} 
+        expandedKeys= {expandedKeys} 
         selectedkeys ={selectedKeys} 
         instanceName= "nz-result-tab-tree"
         selectedNode = {resultselectednode}
+        handleNodeSelectEvent={(selectedKeys: any, info: any, expandedNodes: any) => {
+        }}
+        handleNodeCheckedEvent={(checksKeys: any, info: any, expandedNodes: any) => {
+          console.log('expandedNodes handelCheckBox:', expandedNodes);
+          // setExpandedkey([...expandedNodes]);
+          // treeViewCheck(info)
+      }}
          />
     </div>
   )

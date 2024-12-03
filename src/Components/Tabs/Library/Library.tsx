@@ -14,7 +14,7 @@ interface EqType {
   eqtype: string,
 }
 
-const Library = () => {
+const Library = (props:any) => {
   const [kwdSearchType, setKwdSearchType] = useState<string>('true');
   const [loading, setLoading] = useState<boolean>(false);
   const [manufacturers, setManufacturers] = useState<Manufacturer[]>([]);
@@ -36,7 +36,6 @@ const Library = () => {
   const handleKwdSearchTypeChange = (event: any) => {
     setKwdSearchType(event.target.value);
   };
-  let getsessionId = sessionStorage.getItem("sessionID")
 
   const handleManufacturerChange = (event: SelectChangeEvent<string>) => {
     const selectedValue = event.target.value;
@@ -61,6 +60,7 @@ const Library = () => {
     setProductNumber([])
 
   }
+
 
   const handleproductnumber = (event: SelectChangeEvent<string>) => {
     setSelectedProductNumber(event.target.value)
@@ -116,6 +116,7 @@ const Library = () => {
 
   useEffect(() => {
     const fetchManufacturers = async () => {
+      if(props.instanceName === "Library"){
       setLoading(true);
       try {
         await getMfg(0, "").then((resp: any) => {
@@ -134,8 +135,9 @@ const Library = () => {
       }
       setLoading(false);
     };
+  }
     fetchManufacturers();
-  }, [getsessionId]);
+  }, [props.instanceName]);
 
 
   useEffect(() => {
@@ -220,13 +222,9 @@ const Library = () => {
           component="form"
           className='form-box'
         >
-          <div className='search-input-container'>
             <div className='search-field-wrapper'>
 
-              <div className='search-input-container'>
-
-                <div className='search-field-wrapper'>
-
+            <div className='search-icon-textfield'>
                   <TextField
                     id="outlined-controlled"
                     label="Search"
@@ -242,22 +240,23 @@ const Library = () => {
                     }}
                   />
             
-                </div>
 
                 <div className='search-icon' >
                   <img
-                    src="./assets/Icons/Search_128x128.svg"
+                    src="../assets/Icons/Search_128x128.svg"
                     alt="Search"
                     // onClick={() => !loading && handlesearch()}
                     onClick={handlesearch}
                     className='search-icon'
                   />
                 </div>
+                </div>
 
-              </div>
+      
+            </div>
+            <div className='radio'>
 
-              <div className="form-container">
-                <FormControl component="fieldset" className="form-control">
+            <FormControl component="fieldset" className="form-control">
                   <RadioGroup
                     row
                     className="radio-group"
@@ -274,13 +273,9 @@ const Library = () => {
                       label="All Words"
                     />
                   </RadioGroup>
+                  
                 </FormControl>
-              </div>
-
-            
-
             </div>
-          </div>
 
           <div className="form-container">
            
@@ -433,7 +428,7 @@ const Library = () => {
       ) : (
         showTreeComponent && treeData.length > 0 ? (
           <>
-            <TabContainer treedata={treeData} />
+            <TabContainer treeData={treeData} />
           </>
         )
           : ('')

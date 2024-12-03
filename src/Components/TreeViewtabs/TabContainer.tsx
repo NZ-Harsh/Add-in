@@ -12,21 +12,21 @@ export const TabContainer = (props: any) => {
     const [treedata, setTreedata] = useState();
     const [Eqid, setEqId] = useState<string | string>('');
     const [relatedtreedata, setRelatedTreeData] = useState<any[]>([]);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+    const [isLoading, setIsLoading] = useState<boolean>(false);
 
-const dispatch = useDispatch()
+    const dispatch = useDispatch()
 
     const onSuccess = (resultData: any[]) => {
         if (resultData && resultData.length > 0) {
             const treeHierarchy = transformToRcTreeData(resultData);
             console.log('treeHierarchy:', treeHierarchy);
-            if(treeHierarchy?.length >0 ){
+            if (treeHierarchy?.length > 0) {
                 setRelatedTreeData(treeHierarchy);
-                dispatch({type:"RELATED_TREE-DATA", data:treeHierarchy})
+                dispatch({ type: "RELATED_TREE-DATA", data: treeHierarchy })
             }
         } else {
             setRelatedTreeData([]);
-            dispatch({type:"RELATED_TREE-DATA", data:null})
+            dispatch({ type: "RELATED_TREE-DATA", data: null })
 
         }
     };
@@ -35,41 +35,41 @@ const dispatch = useDispatch()
         console.error('Error:', message);
     };
 
-    const handleSelect =(Eqid:any) =>{
-        if(Eqid){
+    const handleSelect = (Eqid: any) => {
+        if (Eqid) {
             setEqId(Eqid)
-        }else{
+        } else {
             setEqId('')
         }
     }
 
     useEffect(() => {
-        if (props.treedata?.length > 0) {
-            setTreedata(props.treedata);
+        if (props.treeData?.length > 0) {
+            setTreedata(props.treeData);
         }
-    }, [props.treedata]);
-
+    }, [props.treeData]);
 
     const handleTabChange = (_event: any, newValue: number,) => {
         setTabValue(newValue);
         if (newValue === 1 && Eqid) {
-        setIsLoading(true)
+            setIsLoading(true)
 
             Search({ Eqid }, onSuccess, onError);
         }
-setIsLoading(false)
+        setIsLoading(false)
     };
 
     return (
         <div>
             <Backdrop sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }} open={isLoading}>
-          <CircularProgress color="inherit" />
-        </Backdrop>
+                <CircularProgress color="inherit" />
+            </Backdrop>
             <Box>
                 <Tabs
                     value={tabValue}
                     onChange={handleTabChange}
                     aria-label="Result and Related Tabs"
+                    className='lib-tabs'
                 >
                     <Tab label="Result" />
                     {Eqid && <Tab label="Related" />}
@@ -77,13 +77,21 @@ setIsLoading(false)
 
                 {tabValue === 0 && (
                     <Box>
-                        {props.treedata?.length > 0 && <ResultTab treedata={treedata} handleSelect={handleSelect} />}
+                        {props.treeData?.length > 0 && <ResultTab treeData={treedata} handleSelect={handleSelect} />}
                     </Box>
                 )}
 
                 {tabValue === 1 && (
                     <Box>
-                        {relatedtreedata.length > 0 && <RelatedTab treedata={relatedtreedata} handleSelect={handleSelect} />}
+                        {relatedtreedata.length > 0 && <RelatedTab treeData={relatedtreedata} handleSelect={handleSelect}
+                            handleNodeCheckedEvent={(checksKeys: any, info: any, expandedNodes: any) => {
+                                console.log('expandedNodes handelCheckBox:', expandedNodes);
+                                // setExpandedkey([...expandedNodes]);
+                                // treeViewCheck(info)
+                            }}
+                            handleNodeSelectEvent={(selectedKeys: any, info: any, expandedNodes: any) => {
+                            }}
+                        />}
                     </Box>
                 )}
             </Box>

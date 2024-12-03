@@ -2,9 +2,8 @@ import  { useState, useEffect, Suspense, lazy } from 'react';
 import { Backdrop, CircularProgress } from '@mui/material';
 import { createSession,isSessionOpen } from './redux/reducers/sessionService'
 import { setStorageItem } from './Common/Common';
-const Main = lazy(() => import('./Pages/Main/Main'));
-const LandingPage = lazy(() => import('./Pages/LandingPage/LandingPage'));
-
+import Main from './Pages/Main/Main';
+import LandingPage from './Pages/LandingPage/LandingPage';
 function App() {
   const [showMainPage, setShowMainPage] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
@@ -82,7 +81,7 @@ function App() {
       )}
 
       <Suspense >
-        {showMainPage ? <Main /> : <LandingPage />}
+        {showMainPage ? <Main/> : <LandingPage />}
       </Suspense>
     </div>
   );
